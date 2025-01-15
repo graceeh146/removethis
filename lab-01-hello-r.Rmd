@@ -1,6 +1,6 @@
 ---
 title: "Lab 01 - Hello R"
-author: "Insert your name here"
+author: "Enhui Wang"
 date: "Insert date here"
 output: 
   html_document: 
