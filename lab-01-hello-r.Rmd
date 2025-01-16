@@ -69,20 +69,25 @@ star_data %>%
   summarize(r = cor(x, y))
 
 ```
-The corrleation coefficent between x and y is r=-0.0629, meaning that there is no linear relationship between the x and y variables in the 'dino' dataset. The r for star is almost identical as the r for dino, indicating the star dataset does not have a stronger linear relationship.
+The corrleation coefficent between x and y is r=-0.0629, meaning that there is no linear relationship between the x and y variables in the 'star' dataset. The r for star is almost identical as the r for dino, indicating the star dataset does not have a stronger linear relationship.
 
 
 ### Exercise 4
 
-Add your code and narrative to complete this exercise. Use the conventions from the previous exercises to name your chunks and organize your work.
+```{r plot-dino, fig.height=3, fig.width=6}
+circle_data <- datasaurus_dozen %>%
+  filter(dataset == "circle")
 
-```{r}
-
+ggplot(data = circle_data, mapping = aes(x = x, y = y)) +
+  geom_point() 
 ```
 
 ```{r}
+circle_data %>%
+  summarize(r = cor(x, y))
 
 ```
+The corrleation coefficent between x and y is r=-0.06834336	, meaning that there is no linear relationship between the x and y variables in the 'circle' dataset. The r for circle is almost identical as the r for dino, indicating the star dataset does not have a stronger linear relationship.
 
 ### Exercise 5
 
