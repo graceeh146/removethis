@@ -4,8 +4,8 @@ author: "Enhui Wang"
 date: "2024/01/15"
 output: 
   html_document: 
-    highlight: espresso
-    theme: cosmo
+    highlight: zenburn
+    theme: lumen
 ---
 
 ## Load packages and data
@@ -48,13 +48,11 @@ The corrleation coefficent between x and y is r=-0.064, meaning that there is no
 
 This is your turn to write the code and narrative for the star dataset. Follow the same steps as above to complete the analysis. Don't forget to label your chunks appropriately!
 
-Note that the R chunks are labeled with `plot-star` and `cor-star` to provide spaces to place the code for plotting and calculating the correlation coefficient.
-To finish, clean up the narrative by removing these instructions.
-
-```{r plot-dino, fig.height=3, fig.width=6}
+```{r plot-star, fig.height=3, fig.width=6}
+#Filter the data for the star dataset
 star_data <- datasaurus_dozen %>%
   filter(dataset == "star")
-
+#Create a plot for the dataset
 ggplot(data = star_data, mapping = aes(x = x, y = y)) +
   geom_point() 
 
@@ -64,7 +62,7 @@ ggplot(data = star_data, mapping = aes(x = x, y = y)) +
 I'm some filler text, you should replace me with more meaningful text...
 
 ```{r cor-star}
-# Calculate the correlation coefficient for the "star" dataset
+# Calculate the correlation coefficient for the star dataset
 star_data %>%
   summarize(r = cor(x, y))
 
@@ -74,15 +72,18 @@ The corrleation coefficent between x and y is r=-0.0629, meaning that there is n
 
 ### Exercise 4
 
-```{r plot-dino, fig.height=3, fig.width=6}
+```{r plot-circle, fig.height=3, fig.width=6}
+#Filter the data for the circle dataset
 circle_data <- datasaurus_dozen %>%
   filter(dataset == "circle")
 
+#Create the plot for the dataset
 ggplot(data = circle_data, mapping = aes(x = x, y = y)) +
   geom_point() 
 ```
 
 ```{r}
+#Calculate the correlation coefficient for the star dataset
 circle_data %>%
   summarize(r = cor(x, y))
 
@@ -91,8 +92,9 @@ The corrleation coefficent between x and y is r=-0.06834336	, meaning that there
 
 ### Exercise 5
 ```{r}
+
 ggplot(datasaurus_dozen, aes(x = x, y = y, color = dataset)) +
-  geom_point() +
+  geom_point() + 
   facet_wrap(~dataset, ncol = 3) +
   theme(legend.position = "none")
   
