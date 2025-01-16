@@ -41,7 +41,7 @@ Next, let's calculate the correlation between `x` and `y` in this dataset:
 dino_data %>%
   summarize(r = cor(x, y))
 ```
-Once you’ve cleaned up the text, add your own explanation or observations here!
+The corrleation coefficent between x and y is r=-0.064, meaning that there is no linear relationship between the x and y variables in the 'dino' dataset. 
 
 
 ### Exercise 3
