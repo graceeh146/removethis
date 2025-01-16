@@ -51,16 +51,25 @@ This is your turn to write the code and narrative for the star dataset. Follow t
 Note that the R chunks are labeled with `plot-star` and `cor-star` to provide spaces to place the code for plotting and calculating the correlation coefficient.
 To finish, clean up the narrative by removing these instructions.
 
-```{r plot-star}
+```{r plot-dino, fig.height=3, fig.width=6}
+star_data <- datasaurus_dozen %>%
+  filter(dataset == "star")
+
+ggplot(data = star_data, mapping = aes(x = x, y = y)) +
+  geom_point() 
+
 
 ```
 
 I'm some filler text, you should replace me with more meaningful text...
 
 ```{r cor-star}
+# Calculate the correlation coefficient for the "star" dataset
+star_data %>%
+  summarize(r = cor(x, y))
 
 ```
-Add your explanation here—what did you notice?
+The corrleation coefficent between x and y is r=-0.0629, meaning that there is no linear relationship between the x and y variables in the 'dino' dataset. The r for star is almost identical as the r for dino, indicating the star dataset does not have a stronger linear relationship.
 
 
 ### Exercise 4
