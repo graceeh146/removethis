@@ -4,8 +4,8 @@ author: "Enhui Wang"
 date: "2024/01/15"
 output: 
   html_document: 
-    fig_height: 4
-    fig_width: 9
+    highlight: espresso
+    theme: cosmo
 ---
 
 ## Load packages and data
