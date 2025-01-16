@@ -19,7 +19,7 @@ library(datasauRus)
 
 ### Exercise 1
 
-Remove this text, and add your answer for Exercise 1 here.
+The dataset has 1846 rows and 3 columns. It includes variabels 'dateset','x',and 'y'.
 
 ### Exercise 2
 
