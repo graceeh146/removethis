@@ -2,10 +2,7 @@
 title: "Lab 01 - Hello R"
 author: "Enhui Wang"
 date: "2024/01/15"
-output: 
-  html_document: 
-    highlight: zenburn
-    theme: lumen
+output: github_document
 ---
 
 ## Load packages and data
